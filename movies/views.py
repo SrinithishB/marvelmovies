@@ -10,7 +10,7 @@ def home(request):
     p3=Movies.objects.filter(phase=p.get(phase=3))
     p4=Movies.objects.filter(phase=p.get(phase=4))
     p5=Movies.objects.filter(phase=p.get(phase=5))
-    return render(request,'movies/home.html',{'p1':p1,'p2':p2,'p3':p3,'p4':p4,'p5':p5}),HttpResponse(200)
+    return render(request,'movies/home.html',{'p1':p1,'p2':p2,'p3':p3,'p4':p4,'p5':p5})
 def fav(request):
     m=Movies.objects.filter(fav=True)
     return render(request,'movies/faviroute.html',{'m':m})

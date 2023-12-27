@@ -1,0 +1,20 @@
+{% extends "movies/base.html" %}
+{% load static %}
+{% block title %}Marvel-Faviroute{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static "movies/style/fav.css" %}">{% endblock link %}
+{% block content %}
+<div class="banner"></div>
+
+<h2>My Faviroute Movies</h2>
+
+<div class="box-container">
+    {% for i in m %}
+                <a href="{{i.link}}"><div class="box" data-aos="fade-up">
+                    <img src="{{i.image.url}}"/>
+                    <p text="red">{{i.mname}}</p>
+                    <p>{{i.year}}</p>
+                </div></a>
+                {% endfor %}
+</div>
+{% endblock content %}
+

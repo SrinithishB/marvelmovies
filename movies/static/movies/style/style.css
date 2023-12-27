@@ -1,0 +1,198 @@
+body{
+    color: white;
+    /* background-color: black; */
+    background:linear-gradient(to right,red,black);
+    /* transition: 5s; */
+    animation-name: back;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    backdrop-filter: blur(50px);
+}
+
+.banner{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* background: linear-gradient(rgba(255, 0, 0, 0.371),rgba(0, 0, 0, 0.349)),url('../img/back.webp'); */
+    /* background-position: center;
+    background-size: cover; */
+    
+}
+.banner p{
+    font-size: 3em;
+}
+.banner img{
+    width: 27vw;
+    animation-name: deadpool;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+.banner img:hover{
+    content: url('../img/doctorstrange.png');
+}
+.gotobtn{
+    color: white;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.112);
+    padding: 15px;
+    border-radius: 16px;
+    text-decoration: none;
+    border: 3px solid white;
+    box-shadow: black 5px 10px 10px;
+}
+/* .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.movies1{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/banner5.jpg');
+    /* background-color: black; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    /* height: 100vh; */
+    /* margin: 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    
+}
+.movies2{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/banner7.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    /* height: 100vh; */
+    /* margin: 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.movies3{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/banner8.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    /* height: 100vh; */
+    /* margin: 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.movies4{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/banner4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    /* height: 100vh; */
+    /* margin: 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.movies5{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/banner6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    /* height: 100vh; */
+    /* margin: 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.phase1,.phase2,.phase3,.phase4,.phase5{
+    /* color: black; */
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 90%;
+    height: fit-content;
+    margin-top: 15px;
+    display: flex;
+    overflow-x: auto;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    text-wrap: nowrap;
+    box-shadow: black 10px 5px 50px;
+}
+
+.phase1::-webkit-scrollbar,.phase2::-webkit-scrollbar,.phase3::-webkit-scrollbar,.phase4::-webkit-scrollbar{
+    width: 0;
+}
+.box{
+    min-width: 200px;
+    max-width: 200px;
+    height:370px;
+    background-color: white;
+    margin: 15px;
+    box-shadow: black 10px 5px 50px;
+    border-radius: 15px;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    /* margin-right: 2px; */
+}
+a{
+    text-decoration: none;
+}
+.box:hover{
+    box-shadow: #EC1D24 10px 5px 50px;
+}
+.box p{
+    text-wrap:wrap;
+}
+.box img{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+@keyframes deadpool {
+    0%,100%{
+        transform: translateX(5%);
+        content: url('../img/deadpool.png');
+        /* transform: translateX(5%); */
+    }
+    50%{
+        transform: translateY(5%);
+        content: url('../img/doctorstrange.png');
+        
+        /* transform: translateX(0%); */
+    }
+}
+@keyframes back {
+    50%{
+        
+    background:linear-gradient(to left,#EE9B20,black);
+    }
+    0%,100%{
+        
+    background:linear-gradient(to right,red,black);
+    }
+}
+@media screen and (max-width:300px) {
+    .banner p{
+        font-size: 2em;
+    }
+}
+@keyframes slide-fade-in {
+    from{
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+}

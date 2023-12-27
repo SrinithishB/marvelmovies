@@ -1,0 +1,82 @@
+{% extends "movies/base.html" %}
+{% load static %}
+{% block title %}Marvel-Home{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static "movies/style/style.css" %}">{% endblock link %}
+{% block content %}
+<div class='content'>
+    <div class='banner' data-aos="fade-right">
+        <p>Watch Marvel movies in <br>Disney+ Hotstar<br>
+        <a class="gotobtn" href="https://www.hotstar.com/in/">Go to Hotstar</a></p>
+        <img src="{% static "movies/img/deadpool.png" %}"/>
+    </div>
+    <div class="movies">
+        <div class="movies1">
+            <h1>Movies</h1>
+            <p>Journey into the cosmic depths of the mighty Marvel Cinematic Universe!</p>
+            <div class="phase1" data-aos="fade-right">
+                <h1>Phase 1</h1>
+                {% for i in p1 %}
+                <a href="{{i.link}}"><div class="box" data-aos="fade-right">
+                    <img src="{{i.image.url}}"/>
+                    <p text="red">{{i.mname}}</p>
+                    <p>{{i.year}}</p>
+                </div></a>
+                {% endfor %}
+                
+            </div>
+        </div>
+        <div class="movies2">
+            <div class="phase2" data-aos="fade-right">
+                <h1>Phase 2</h1>
+                {% for i in p2 %}
+                <div class="box" data-aos="fade-right">
+                    <img src="{{i.image.url}}"/>
+                    <p text="red">{{i.mname}}</p>
+                    <p>{{i.year}}</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+        <div class="movies3">
+            <div class="phase3" data-aos="fade-right">
+                <h1>Phase 3</h1>
+                {% for i in p3 %}
+                <div class="box" data-aos="fade-right">
+                    <img src="{{i.image.url}}"/>
+                    <p text="red">{{i.mname}}</p>
+                    <p>{{i.year}}</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+        <div class="movies4">
+            <div class="phase4" data-aos="fade-right">
+                <h1>Phase 4</h1>
+                {% for i in p4 %}
+                <div class="box" data-aos="fade-right">
+                    <img src="{{i.image.url}}"/>
+                    <p text="red">{{i.mname}}</p>
+                    <p>{{i.year}}</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+        <div class="movies5">
+            <div class="phase5" data-aos="fade-right">
+                <h1>Phase 5</h1>
+                {% for i in p5 %}
+                <div class="box" data-aos="fade-right">
+                    <img src="{{i.image.url}}"/>
+                    <p text="red">{{i.mname}}</p>
+                    <p>{{i.year}}</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

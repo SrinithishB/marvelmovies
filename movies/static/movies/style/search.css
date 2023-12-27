@@ -1,0 +1,50 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10%;
+    justify-content: center;
+}
+.searchBar{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px;
+    background-color: whitesmoke;
+    color: black;
+}
+.box{
+    max-width: 200px;
+    height:370px;
+    background-color: white;
+    margin: 15px;
+    box-shadow: black 10px 5px 50px;
+    border-radius: 15px;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.box:hover{
+    box-shadow: #EC1D24 10px 5px 50px;
+}
+.box p{
+    text-wrap:wrap;
+}
+.box img{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

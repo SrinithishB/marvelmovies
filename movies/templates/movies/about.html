@@ -1,0 +1,12 @@
+{% extends "movies/base.html" %}
+{% load static %}
+{% block title %}Marvel-About{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static "movies/style/about.css" %}">{% endblock link %}
+{% block content %}
+<div class="banner"></div>
+<div class='about'>
+<h2>About</h2>
+<p>This project showcases the Marvel Cinematic Universe (MCU) movies and was developed using the Django framework. The web application features engaging animations for user interaction, implemented through a combination of CSS and JavaScript. Django modules are employed to efficiently store and manage the movie data, providing a seamless and organized experience for users navigating through the MCU movie collection</p>
+</div>
+{% endblock content %}
+

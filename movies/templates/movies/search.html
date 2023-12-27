@@ -1,0 +1,22 @@
+{% extends "movies/base.html" %}
+{% load static %}
+{% block title %}Marvel-Search{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static "movies/style/search.css" %}">{% endblock link %}
+{% block content %}
+<div class="main">
+    <form method="post">
+        {% csrf_token %}
+        <input type='search' placeholder="Search..." class="searchBar" name="search"/>
+    </form>
+    <div class="box-container">
+        {% for i in m %}
+                    <a href="{{i.link}}"><div class="box" data-aos="fade-up">
+                        <img src="{{i.image.url}}"/>
+                        <p text="red">{{i.mname}}</p>
+                        <p>{{i.year}}</p>
+                    </div></a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+

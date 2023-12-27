@@ -1,0 +1,66 @@
+{% load static %}  
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "movies/style/nav-foot.css" %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f16734b825.js" crossorigin="anonymous"></script>
+    {% block link %}{% endblock link %}
+</head>
+<body>
+    <header>
+        <nav class='nav'>
+            <div class="nav-div">
+            <svg width="130" height="52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect fill="#EC1D24" width="0%" height="0%"></rect><path fill="#FEFEFE" d="M126.222 40.059v7.906H111.58V4h7.885v36.059h6.757zm-62.564-14.5c-.61.294-1.248.44-1.87.442v-14.14h.04c.622-.005 5.264.184 5.264 6.993 0 3.559-1.58 5.804-3.434 6.705zM40.55 34.24l2.183-18.799 2.265 18.799H40.55zm69.655-22.215V4.007H87.879l-3.675 26.779-3.63-26.78h-8.052l.901 7.15c-.928-1.832-4.224-7.15-11.48-7.15-.047-.002-8.06 0-8.06 0l-.031 39.032-5.868-39.031-10.545-.005-6.072 40.44.002-40.435H21.278L17.64 26.724 14.096 4.006H4v43.966h7.95V26.78l3.618 21.192h4.226l3.565-21.192v21.192h15.327l.928-6.762h6.17l.927 6.762 15.047.008h.01v-.008h.02V33.702l1.845-.27 3.817 14.55h7.784l-.002-.01h.022l-5.011-17.048c2.538-1.88 5.406-6.644 4.643-11.203v-.002C74.894 19.777 79.615 48 79.615 48l9.256-.027 6.327-39.85v39.85h15.007v-7.908h-7.124v-10.08h7.124v-8.03h-7.124v-9.931h7.124z"></path><path fill="#FEFEFE" d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"></path></svg>
+            <h1>Movies</h1>
+            </div>
+            <div class="menu">
+                <a href="{% url "movie:home" %}"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="{% url "movie:search" %}"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+                <a href="{% url "movie:fav" %}"><i class="fa-solid fa-star"></i> Faviroute</a>
+                <a href="{% url "movie:about" %}"><i class="fa-solid fa-user"></i> About</a>
+            </div>
+            <div class="menu-bar">
+                <button id='menubtn'><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+    {% block content %}{% endblock content %}
+<footer>
+    <div class='footer' data-aos="fade-up">
+        <svg width="130" height="52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect fill="#EC1D24" width="100%" height="100%"></rect><path fill="#FEFEFE" d="M126.222 40.059v7.906H111.58V4h7.885v36.059h6.757zm-62.564-14.5c-.61.294-1.248.44-1.87.442v-14.14h.04c.622-.005 5.264.184 5.264 6.993 0 3.559-1.58 5.804-3.434 6.705zM40.55 34.24l2.183-18.799 2.265 18.799H40.55zm69.655-22.215V4.007H87.879l-3.675 26.779-3.63-26.78h-8.052l.901 7.15c-.928-1.832-4.224-7.15-11.48-7.15-.047-.002-8.06 0-8.06 0l-.031 39.032-5.868-39.031-10.545-.005-6.072 40.44.002-40.435H21.278L17.64 26.724 14.096 4.006H4v43.966h7.95V26.78l3.618 21.192h4.226l3.565-21.192v21.192h15.327l.928-6.762h6.17l.927 6.762 15.047.008h.01v-.008h.02V33.702l1.845-.27 3.817 14.55h7.784l-.002-.01h.022l-5.011-17.048c2.538-1.88 5.406-6.644 4.643-11.203v-.002C74.894 19.777 79.615 48 79.615 48l9.256-.027 6.327-39.85v39.85h15.007v-7.908h-7.124v-10.08h7.124v-8.03h-7.124v-9.931h7.124z"><path fill="#EC1D24" d="M0 0h30v52H0z"></path></path><path fill="#FEFEFE" d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"></path></svg>
+        <br><br>
+        <h2>Marvel Cinematic Universe</h2>
+        <br>
+        <p>The Marvel Cinematic Universe (MCU) is an American media franchise and shared universe centered on a series of superhero films produced by Marvel Studios. The films are based on characters that appear in American comic books published by Marvel Comics. The franchise also includes television series, short films, digital series, and literature. The shared universe, much like the original Marvel Universe in comic books, was established by crossing over common plot elements, settings, cast, and characters.
+
+            Marvel Studios releases its films in groups called "Phases", with the first three phases collectively known as "The Infinity Saga" and the following three phases as "The Multiverse Saga". The first MCU film, Iron Man (2008), began Phase One, which culminated in the 2012 crossover film The Avengers. Phase Two began with Iron Man 3 (2013) and concluded with Ant-Man (2015). Phase Three began with Captain America: Civil War (2016) and concluded with Spider-Man: Far From Home (2019). Phase Four began with Black Widow (2021) and concluded with Black Panther: Wakanda Forever (2022). Ant-Man and the Wasp: Quantumania (2023) began Phase Five, which will end with Captain America: Brave New World (2025), and Phase Six will begin with Fantastic Four (2025). Phase Six and "The Multiverse Saga" will conclude with Avengers 5 (2026) and Avengers: Secret Wars (2027).
+            
+            Marvel Television expanded the universe to network television with Agents of S.H.I.E.L.D. on ABC in 2013 before further expanding to streaming television on Netflix and Hulu and to cable television on Freeform. They also produced the digital series Agents of S.H.I.E.L.D.: Slingshot. Marvel Studios began producing their own television series for streaming on Disney+, starting with WandaVision in 2021 as the beginning of Phase Four. They also expanded to television specials in Phase Four, known as Marvel Studios Special Presentations, the first of which was Werewolf by Night (2022). The MCU also includes tie-in comics published by Marvel Comics, a series of direct-to-video short films called Marvel One-Shots, and viral marketing campaigns for the films featuring the faux news programs WHIH Newsfront and The Daily Bugle.
+            
+            The franchise has been commercially successful, becoming one of the highest-grossing media franchises of all time, and generally received positive reviews. It has inspired other film and television studios to attempt similar shared universes, and has also inspired several themed attractions, an art exhibit, television specials, literary material, multiple tie-in video games, and commercials. <a href="https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe">Learn more....</a></p>
+            <br><br>
+            <div class='social'>
+            <a href="https://www.linkedin.com/in/srinithish-b-4480b6238/"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+            <a href="https://github.com/SrinithishB"><i class="fa-brands fa-github"></i> Github</a>
+            </div>
+            
+    </div>
+</footer>
+<div id='menu-slide'>
+    <button id="close"><i class="fa-solid fa-xmark"></i></button>
+    <a href="{% url "movie:home" %}"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="{% url "movie:search" %}"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+    <a href="{% url "movie:fav" %}"><i class="fa-solid fa-star"></i> Faviroute</a>
+    <a href="{% url "movie:about" %}"><i class="fa-solid fa-user"></i> About</a>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="{% static "movies/script/script.js" %}"></script>
+</body>
+</html>

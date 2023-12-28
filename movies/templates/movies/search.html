@@ -6,7 +6,7 @@
 <div class="main">
     <form method="post">
         {% csrf_token %}
-        <input type='search' placeholder="Search..." class="searchBar" name="search"/>
+        <input type='search' placeholder="Search..." class="searchBar" name="search" value='{{s}}'/>
     </form>
     <div class="box-container">
         {% for i in m %}

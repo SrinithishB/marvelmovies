@@ -22,15 +22,15 @@ def search(request):
         m=Movies.objects.all()
         l=[]
         for i in m:
-            if s.lower() in str(i.mname.lower()).split():
+            if s.lower() in str(i.mname.lower()):
                 l+=[i]
             try:
-                if int(s) == int(i.year):
+                if s in i.year:
                     l+=[i]
             except:
                 pass
 
-        return render(request,'movies/search.html',{'m':l})
+        return render(request,'movies/search.html',{'m':l,'s':s})
     return render(request,'movies/search.html')
 def about(request):
     return render(request,'movies/about.html')

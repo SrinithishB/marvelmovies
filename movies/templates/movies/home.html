@@ -29,11 +29,11 @@
             <div class="phase2" data-aos="fade-right">
                 <h1>Phase 2</h1>
                 {% for i in p2 %}
-                <div class="box" data-aos="fade-right">
+                <a href="{{i.link}}"><div class="box" data-aos="fade-right">
                     <img src="{{i.image.url}}"/>
                     <p text="red">{{i.mname}}</p>
                     <p>{{i.year}}</p>
-                </div>
+                </div></a>
                 {% endfor %}
                 
             </div>
@@ -42,11 +42,11 @@
             <div class="phase3" data-aos="fade-right">
                 <h1>Phase 3</h1>
                 {% for i in p3 %}
-                <div class="box" data-aos="fade-right">
+                <a href="{{i.link}}"> <div class="box" data-aos="fade-right">
                     <img src="{{i.image.url}}"/>
                     <p text="red">{{i.mname}}</p>
                     <p>{{i.year}}</p>
-                </div>
+                </div></a>
                 {% endfor %}
                 
             </div>
@@ -55,11 +55,11 @@
             <div class="phase4" data-aos="fade-right">
                 <h1>Phase 4</h1>
                 {% for i in p4 %}
-                <div class="box" data-aos="fade-right">
+                <a href="{{i.link}}"><div class="box" data-aos="fade-right">
                     <img src="{{i.image.url}}"/>
                     <p text="red">{{i.mname}}</p>
                     <p>{{i.year}}</p>
-                </div>
+                </div></a>
                 {% endfor %}
                 
             </div>
@@ -68,11 +68,11 @@
             <div class="phase5" data-aos="fade-right">
                 <h1>Phase 5</h1>
                 {% for i in p5 %}
-                <div class="box" data-aos="fade-right">
+                <a href="{{i.link}}"><div class="box" data-aos="fade-right">
                     <img src="{{i.image.url}}"/>
                     <p text="red">{{i.mname}}</p>
                     <p>{{i.year}}</p>
-                </div>
+                </div></a>
                 {% endfor %}
                 
             </div>

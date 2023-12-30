@@ -70,7 +70,7 @@ body{
     color: black;
     margin-right: 15px;
 }
-@media screen and (max-width:687px) {
+@media screen and (max-width:688px) {
     .menu{
         display: none;
     }

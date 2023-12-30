@@ -13,6 +13,7 @@
         justify-content: center;
         align-items: center;
         height: 40vh;
+        text-align: justify;
 }
 .about h2{
     margin:15px;
